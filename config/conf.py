@@ -35,15 +35,13 @@ class ConfigWeb(object):
             return True
         except Exception as e:
             log.error(f"SQL执行失败::{e}")
-            if :
-                self.conn.rollback()
-                log.warning(f"SQL执行失败，回滚")
+            self.conn.rollback()
+            log.warning(f"SQL执行失败，回滚")
             return False
     def create(self):
         self.cursor.execute(f'CREATE DATABASE IF NOT EXISTS `flask_db`')
         self.cursor.execute('USE `user`')
         self.cursor.execute('CREATE ')
-        self.cursor.execute('INSERT INTO TABLE `user` VALUES')
 
 
 if __name__ == '__main__':
