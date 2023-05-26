@@ -45,7 +45,8 @@ def insert_baseinfo():
     res: MessageGen = mysql.insert(data.table, data.data.dict())
     return jsonify(res.dict())
 
-@app.route('/api',methods=['POST','GET'])
+
+@app.route('/api', methods=['POST', 'GET'])
 def api():
     if request.method != 'POST':
         return "Support POST Method Only"
@@ -54,36 +55,48 @@ def api():
     try:
         model = receive['control'].lower()
         table = receive['table']
-        re_data = receive['data']
+        re_data = receive['data'] if isinstance(receive['data'], (dict,list)) else {}
+        log.debug(f"检查数据获取状态::{model}*{type(model)}+++{table}*{type(table)}+++{re_data}*{type(re_data)}")
     except KeyError as e:
         log.error(f"Can Not Found Key::{e}")
         return 'Key Not Found Error Occurred'
+    except Exception as e:
+        log.critical(f"Unknown FATAL Error Occurred::{e}")
+        return "Failed"
     if model == "insert":
         log.info(f"Using INSERT Model")
         data_filter = insert_splitter(table).parse_obj(re_data)
         log.success(f"Loading Data Successfully")
         res: MessageGen = mysql.insert(table, data_filter.dict())
     elif model == "delete":
-        res: MessageGen = mysql.delete(table, re_data.get('condition',None))
+        res: MessageGen = mysql.delete(table, re_data.get('condition', None))
     elif model == "select":
-        condition = re_data.get('condition',None)
-        column = re_data.get('column',None)
+        condition = re_data.get('condition', None)
+        column = re_data.get('column', None)
         limit = re_data.get('limit', -1)
         if limit == -1:
             log.warning(f"Value limit Missing, Using Default Value -1")
         if column is None or condition is None:
-            log.error(f"ValueError::column or condition is empty")
-            return "Empty Value Error"
-        res: MessageGen = mysql.select(table,condition,column,limit)
+            log.error(f"ValueError::column or condition is None")
+            condition = "" if condition is None else condition
+            column = "*" if column is None else column
+        res: MessageGen = mysql.select(table, condition, column, limit)
     elif model == "update":
-        if isinstance(re_data,list) and len(re_data) >=1:
-            res: MessageGen = mysql.update(table,"",0,"",re_data)
+        if isinstance(re_data, list) and len(re_data) >= 1:
+            res: MessageGen = mysql.update(table, "", 0, "", re_data)
         else:
-            res: MessageGen = mysql.update(table, re_data.get('key',None),re_data.get('value',None),re_data.get('condition',None))
+            _condition = re_data.get('condition', None)
+            if _condition is None:
+                log.error(f"condition not should be None")
+                return "Failed"
+            res: MessageGen = mysql.update(table, re_data.get('key', None), re_data.get('value', None),
+                                           _condition)
     else:
         log.error(f"Unknown Model::{model}")
         return 'Unknown Model'
     return jsonify(res.dict())
+
+
 @app.route('/insert', methods=['POST'])
 def general_insert():
     """
@@ -168,4 +181,4 @@ def handle_os_error(e):
 
 
 if __name__ == '__main__':
-    app.run(host="127.0.0.1", port=8086)
+    app.run(host="0.0.0.0", port=8086)

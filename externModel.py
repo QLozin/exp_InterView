@@ -28,7 +28,7 @@ class Department(BaseModel):
 
 class Interview(BaseModel):
     stdid : constr(min_length=12, max_length=12)
-    group : constr(min_length=6,max_length=6)
+    groups : constr(min_length=6,max_length=6)
     startTime : datetime = None
     endTime : datetime = None
 
@@ -46,6 +46,6 @@ class Series(BaseModel):
 class Staff(BaseModel):
     stfid : constr(min_length=12, max_length=12)
     privilege : StrictInt = 4
-    worktime : datetime = None
-    tel : constr(max_length=12)
-    group : constr(max_length=6)
+    worktime : str = None
+    tel : constr(max_length=12) = None
+    groupid : constr(max_length=6) = None

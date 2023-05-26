@@ -140,12 +140,14 @@ class SQL(object):
 
     @staticmethod
     def _update(target_table: str, key_name: str, value, condition: str, cursr=None):
+        info = lambda x,y,z,h:f"SQL Statement:: UPDATE {x} SET {y} = {z} {'' if 'where' in h.lower() else 'WHERE'} {h}"
+        # 这里使用了一个非常愚蠢的方法来完成condition是否有where
+        # 理论上应该将condition的where替换为""从而使用原来的有WHERE方法，但似乎会出现问题
         if condition != "" and "where" not in condition.lower():
             log.warning(f"Condition is not empty but not INCLUDE 'where'")
-            cursr.execute(f"UPDATE {target_table} SET {key_name} = {value} WHERE {condition}")
-        cursr.execute(f"UPDATE {target_table} SET {key_name} = {value} {condition}")
+        cursr.execute(f"UPDATE {target_table} SET {key_name} = {value} {'WHERE' if 'where' not in condition.lower() else ''} {condition}")
         if cursr.rowcount == 0:
-            log.warning(f"Update failed, No record has been changed")
+            log.warning(f"Warning, No record has been changed, Maybe no record match the condition or no need to change")
         else:
             log.success(f"Update success, {key_name} = {value} has been changed")
         return None
@@ -158,7 +160,7 @@ class SQL(object):
             log.warning(
                 f"\nCondition is not empty but not INCLUDE 'where'\nYou can ONLY read 10 records FOR EACH REQUEST")
             cursr.execute(
-                f"SELECT {column_name} FROM {target_table} {condition} LIMIT 10 OFFSET {0 if int(limit) < 0 else limit}")
+                f"SELECT {column_name} FROM {target_table} {condition} LIMIT 100 OFFSET {0 if int(limit) < 0 else limit}")
         else:
             cursr.execute(
                 f"SELECT {column_name} FROM {target_table} {condition} LIMIT {100 if int(limit) < 0 else limit}")
@@ -200,23 +202,29 @@ class SQL(object):
         :param condition: 条件
         :return: 在修饰器中返回Json{"status": bool, "code": int, "msg": str, "data": dict}
         """
-        log.info(f"SQL Statement:: UPDATE {target_table} SET {key_name} = {value} WHERE {condition}")
         res_mid = self._generation_operation(commit=1)(self._update)
         if multiple is None:
             res = res_mid(target_table, key_name, value, condition)
         else:
-            tick = 0
             self.lazy = False
+            res_bool_pool = []
             for sm in multiple:
                 if not isinstance(sm, dict):
                     log.error(f"Find a non-dict object in multiple list")
                     continue
-                res_bool = res_mid(target_table, sm.get('key', None), sm.get('value', None), sm.get('condition', None))
-                if res_bool:
-                    tick += 1
+                _condition = sm.get('condition', None)
+                if _condition is None:
+                    log.error(f"condition should not be None")
+                    continue
+                _key = sm.get('key', None)
+                _value = sm.get('value', None)
+                res_bool = res_mid(target_table, _key,_value, _condition)
+                res_bool_pool.append(res_bool)
+                if not res_bool:
+                    log.error(f"A Update Operation Failed::{_key} +++ {_value} +++ {_condition}")
             self.lazy = True
-            res = MessageGen.true_load("Update ALL Done") if tick == len(multiple) else MessageGen.false_load(
-                f"Update {tick} Done {len(multiple) - tick} Failed")
+            res = MessageGen.true_load("Update ALL Done") if sum(res_bool_pool) == len(multiple) else MessageGen.false_load(
+                f"Update {sum(res_bool_pool)} Done {len(multiple) - sum(res_bool_pool)} Failed")
         log.debug(f"UPDATE 返回值为 {res}")
         return res
 

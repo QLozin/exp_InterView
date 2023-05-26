@@ -1,0 +1,202 @@
+2023-05-24 10:22:49.135 | INFO     | SQL.mainSQL:_connection:60 - SQL connection established
+2023-05-24 17:57:22.124 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 17:57:57.038 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:24:50.114 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:26:13.598 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:26:36.228 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:26:52.547 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'col': '*', 'limit': '10'}}
+2023-05-24 21:26:52.547 | ERROR    | app:api:75 - ValueError::column or condition is empty
+2023-05-24 21:28:07.129 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:28:12.382 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'col': '*', 'limit': '10'}}
+2023-05-24 21:28:12.383 | ERROR    | app:api:75 - ValueError::column or condition is empty
+2023-05-24 21:28:46.230 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:28:46.232 | WARNING  | SQL.mainSQL:_select:152 - Condition is not empty but not INCLUDE 'where'
+You can ONLY read 10 records FOR EACH REQUEST
+2023-05-24 21:28:46.232 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: '<' not supported between instances of 'str' and 'int'
+2023-05-24 21:30:32.532 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:30:35.600 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:30:35.601 | WARNING  | SQL.mainSQL:_select:152 - 
+Condition is not empty but not INCLUDE 'where'
+You can ONLY read 10 records FOR EACH REQUEST
+2023-05-24 21:30:35.602 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:31:36.112 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:31:40.207 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:31:40.209 | WARNING  | SQL.mainSQL:_select:153 - 
+Condition is not empty but not INCLUDE 'where'
+You can ONLY read 10 records FOR EACH REQUEST
+2023-05-24 21:31:40.210 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:35:01.332 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:35:04.459 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:35:04.461 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:39:13.648 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:39:13.650 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:39:13.655 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 21:39:13.656 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 21:39:53.184 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:39:57.339 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:39:57.341 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:39:57.347 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 21:39:57.347 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 21:39:57.348 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 21:39:57.355 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:41:05.423 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:41:05.426 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:41:05.430 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 21:41:05.430 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 21:41:05.431 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 21:41:05.441 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: (1062, "Duplicate entry '202183210099' for key 'baseinfo.PRIMARY'")
+2023-05-24 21:41:05.447 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "where name='张全蛋'"}}
+2023-05-24 21:41:05.448 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where name='张全蛋'' at line 1")
+2023-05-24 21:43:24.561 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:43:45.673 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:43:51.239 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:43:51.242 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:43:51.247 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 21:43:51.248 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 21:43:51.248 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 21:43:51.259 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: (1062, "Duplicate entry '202183210099' for key 'baseinfo.PRIMARY'")
+2023-05-24 21:43:51.265 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "where name='张全蛋'"}}
+2023-05-24 21:43:51.266 | WARNING  | SQL.mainSQL:_delete:132 - 'where' statement should not in condition
+2023-05-24 21:43:51.267 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:47:22.448 | INFO     | SQL.mainSQL:_connection:61 - SQL connection established
+2023-05-24 21:47:26.170 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:47:26.172 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:47:26.178 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 21:47:26.179 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 21:47:26.179 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 21:47:26.181 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: (1062, "Duplicate entry '202183210099' for key 'baseinfo.PRIMARY'")
+2023-05-24 21:47:26.185 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "where name='张全蛋'"}}
+2023-05-24 21:47:26.186 | WARNING  | SQL.mainSQL:_delete:132 - 'where' statement should not in condition
+2023-05-24 21:47:26.186 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: 'where' should not in condition
+2023-05-24 21:48:21.953 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:48:21.955 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:48:21.961 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 21:48:21.961 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 21:48:21.962 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 21:48:21.963 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: (1062, "Duplicate entry '202183210099' for key 'baseinfo.PRIMARY'")
+2023-05-24 21:48:21.967 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "where name='张全蛋'"}}
+2023-05-24 21:48:21.968 | WARNING  | SQL.mainSQL:_delete:132 - 'where' statement should not in condition
+2023-05-24 21:48:21.968 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: 'where' should not in condition
+2023-05-24 21:48:21.971 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "name='张全蛋'"}}
+2023-05-24 21:48:21.985 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:51:38.895 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 21:51:38.897 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:51:38.901 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 21:51:38.902 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 21:51:38.902 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 21:51:38.915 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:51:38.919 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "where name='张全蛋'"}}
+2023-05-24 21:51:38.920 | WARNING  | SQL.mainSQL:_delete:132 - 'where' statement should not in condition
+2023-05-24 21:51:38.921 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: 'where' should not in condition
+2023-05-24 21:51:38.925 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "name='张全蛋'"}}
+2023-05-24 21:51:38.929 | SUCCESS  | SQL.mainSQL:foo:103 - SQL Operate success
+2023-05-24 21:51:38.934 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': {'key': 'name', 'value': '中黄', 'condition': "where name='大黄'"}}
+2023-05-24 21:51:38.935 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where name='大黄'' at line 1")
+2023-05-24 21:51:38.940 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': [{'key': 'name', 'value': '大黄', 'condition': "where name='中黄'"}]}
+2023-05-24 21:51:38.941 | CRITICAL | SQL.mainSQL:foo:109 - SQL Operate failed: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where name='中黄'' at line 1")
+2023-05-24 21:51:38.942 | SUCCESS  | SQL.mainSQL:update:214 - Update Done, 0 Success, 1 Failed
+2023-05-24 22:13:50.269 | INFO     | SQL.mainSQL:_connection:62 - SQL connection established
+2023-05-24 22:15:37.963 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 22:15:37.975 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:15:37.980 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 22:15:37.981 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 22:15:37.981 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 22:15:37.986 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:15:37.991 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "where name='张全蛋'"}}
+2023-05-24 22:15:37.992 | WARNING  | SQL.mainSQL:_delete:133 - 'where' statement should not in condition
+2023-05-24 22:15:37.992 | CRITICAL | SQL.mainSQL:foo:110 - SQL Operate failed: 'where' should not in condition
+2023-05-24 22:15:37.999 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "name='张全蛋'"}}
+2023-05-24 22:15:38.003 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:15:38.008 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': {'key': 'name', 'value': '中黄', 'condition': "where name='大黄'"}}
+2023-05-24 22:15:38.009 | CRITICAL | SQL.mainSQL:foo:110 - SQL Operate failed: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where name='大黄'' at line 1")
+2023-05-24 22:15:38.014 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': [{'key': 'name', 'value': '大黄', 'condition': "where name='中黄'"}]}
+2023-05-24 22:15:38.015 | CRITICAL | SQL.mainSQL:foo:110 - SQL Operate failed: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where name='中黄'' at line 1")
+2023-05-24 22:28:01.701 | INFO     | SQL.mainSQL:_connection:62 - SQL connection established
+2023-05-24 22:28:04.106 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 22:28:04.109 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:28:04.114 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 22:28:04.114 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 22:28:04.115 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 22:28:04.126 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:28:04.131 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "where name='张全蛋'"}}
+2023-05-24 22:28:04.132 | WARNING  | SQL.mainSQL:_delete:133 - 'where' statement should not in condition
+2023-05-24 22:28:04.133 | INFO     | SQL.mainSQL:_delete:135 - 'where' in condition has been removed
+2023-05-24 22:28:04.134 | CRITICAL | SQL.mainSQL:foo:110 - SQL Operate failed: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where name='张全蛋'' at line 1")
+2023-05-24 22:28:04.138 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "name='张全蛋'"}}
+2023-05-24 22:28:04.142 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:28:04.146 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': {'key': 'name', 'value': '中黄', 'condition': "where name='大黄'"}}
+2023-05-24 22:28:04.148 | INFO     | SQL.mainSQL:update:201 - SQL Statement:: UPDATE baseinfo SET name = 中黄 WHERE where name='大黄'
+2023-05-24 22:28:04.149 | CRITICAL | SQL.mainSQL:foo:110 - SQL Operate failed: (1054, "Unknown column '中黄' in 'field list'")
+2023-05-24 22:28:04.154 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': [{'key': 'name', 'value': '大黄', 'condition': "where name='中黄'"}]}
+2023-05-24 22:28:04.155 | INFO     | SQL.mainSQL:update:201 - SQL Statement:: UPDATE baseinfo SET  = 0 WHERE 
+2023-05-24 22:28:04.155 | CRITICAL | SQL.mainSQL:foo:110 - SQL Operate failed: (1054, "Unknown column '大黄' in 'field list'")
+2023-05-24 22:33:57.708 | INFO     | SQL.mainSQL:_connection:62 - SQL connection established
+2023-05-24 22:34:00.296 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 22:34:00.298 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:34:00.303 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 22:34:00.304 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 22:34:00.304 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 22:34:00.316 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:34:00.323 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "where name='张全蛋'"}}
+2023-05-24 22:34:00.324 | WARNING  | SQL.mainSQL:_delete:134 - 'where' statement should not in condition
+2023-05-24 22:34:00.324 | INFO     | SQL.mainSQL:_delete:136 - 'where' in condition has been removed :: where name='张全蛋'
+2023-05-24 22:34:00.324 | INFO     | SQL.mainSQL:_delete:137 - Execute DELETE FROM baseinfo WHERE where name='张全蛋'
+2023-05-24 22:34:00.325 | CRITICAL | SQL.mainSQL:foo:110 - SQL Operate failed: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where name='张全蛋'' at line 1")
+2023-05-24 22:34:00.329 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "name='张全蛋'"}}
+2023-05-24 22:34:00.330 | INFO     | SQL.mainSQL:_delete:137 - Execute DELETE FROM baseinfo WHERE name='张全蛋'
+2023-05-24 22:34:00.334 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:34:00.338 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': {'key': 'name', 'value': "'中黄'", 'condition': "where name='大黄'"}}
+2023-05-24 22:34:00.339 | INFO     | SQL.mainSQL:update:203 - SQL Statement:: UPDATE baseinfo SET name = '中黄' WHERE where name='大黄'
+2023-05-24 22:34:00.340 | SUCCESS  | SQL.mainSQL:_update:150 - Update success, name = '中黄' has been changed
+2023-05-24 22:34:00.342 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:34:00.347 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': [{'key': 'name', 'value': "'大黄'", 'condition': "where name='中黄'"}]}
+2023-05-24 22:34:00.347 | INFO     | SQL.mainSQL:update:203 - SQL Statement:: UPDATE baseinfo SET  = 0 WHERE 
+2023-05-24 22:34:00.349 | SUCCESS  | SQL.mainSQL:_update:150 - Update success, name = '大黄' has been changed
+2023-05-24 22:34:00.351 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:06.435 | INFO     | SQL.mainSQL:_connection:62 - SQL connection established
+2023-05-24 22:35:10.106 | INFO     | SQL.mainSQL:_connection:62 - SQL connection established
+2023-05-24 22:35:14.344 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 22:35:14.347 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:14.352 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 22:35:14.353 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 22:35:14.353 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 22:35:14.366 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:14.371 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "where name='张全蛋'"}}
+2023-05-24 22:35:14.373 | WARNING  | SQL.mainSQL:_delete:134 - 'where' statement should not in condition
+2023-05-24 22:35:14.373 | INFO     | SQL.mainSQL:_delete:136 - 'where' in condition has been removed :statement: where name='张全蛋'
+2023-05-24 22:35:14.373 | INFO     | SQL.mainSQL:_delete:137 - Execute DELETE FROM baseinfo WHERE where name='张全蛋'
+2023-05-24 22:35:14.374 | CRITICAL | SQL.mainSQL:foo:110 - SQL Operate failed: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where name='张全蛋'' at line 1")
+2023-05-24 22:35:14.379 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "name='张全蛋'"}}
+2023-05-24 22:35:14.380 | INFO     | SQL.mainSQL:_delete:137 - Execute DELETE FROM baseinfo WHERE name='张全蛋'
+2023-05-24 22:35:14.383 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:14.386 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': {'key': 'name', 'value': "'中黄'", 'condition': "where name='大黄'"}}
+2023-05-24 22:35:14.388 | INFO     | SQL.mainSQL:update:203 - SQL Statement:: UPDATE baseinfo SET name = '中黄' WHERE where name='大黄'
+2023-05-24 22:35:14.388 | SUCCESS  | SQL.mainSQL:_update:150 - Update success, name = '中黄' has been changed
+2023-05-24 22:35:14.391 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:14.395 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': [{'key': 'name', 'value': "'大黄'", 'condition': "where name='中黄'"}]}
+2023-05-24 22:35:14.395 | INFO     | SQL.mainSQL:update:203 - SQL Statement:: UPDATE baseinfo SET  = 0 WHERE 
+2023-05-24 22:35:14.396 | SUCCESS  | SQL.mainSQL:_update:150 - Update success, name = '大黄' has been changed
+2023-05-24 22:35:14.399 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:55.365 | INFO     | SQL.mainSQL:_connection:62 - SQL connection established
+2023-05-24 22:35:59.610 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'select', 'data': {'condition': '', 'column': '*', 'limit': '10'}}
+2023-05-24 22:35:59.612 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:59.616 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'insert', 'data': {'stdid': '202183210099', 'name': '张全蛋', 'sex': '男', 'tel': '123456789012'}}
+2023-05-24 22:35:59.617 | INFO     | app:api:62 - Using INSERT Model
+2023-05-24 22:35:59.617 | SUCCESS  | app:api:64 - Loading Data Successfully
+2023-05-24 22:35:59.630 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:59.634 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "where name='张全蛋'"}}
+2023-05-24 22:35:59.635 | WARNING  | SQL.mainSQL:_delete:134 - 'where' statement should not in condition
+2023-05-24 22:35:59.635 | INFO     | SQL.mainSQL:_delete:136 - 'where' in condition has been removed :statement:  name='张全蛋'
+2023-05-24 22:35:59.635 | INFO     | SQL.mainSQL:_delete:137 - Execute DELETE FROM baseinfo WHERE  name='张全蛋'
+2023-05-24 22:35:59.638 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:59.643 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'delete', 'data': {'condition': "name='张全蛋'"}}
+2023-05-24 22:35:59.644 | INFO     | SQL.mainSQL:_delete:137 - Execute DELETE FROM baseinfo WHERE name='张全蛋'
+2023-05-24 22:35:59.645 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:59.650 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': {'key': 'name', 'value': "'中黄'", 'condition': "where name='大黄'"}}
+2023-05-24 22:35:59.650 | INFO     | SQL.mainSQL:update:203 - SQL Statement:: UPDATE baseinfo SET name = '中黄' WHERE where name='大黄'
+2023-05-24 22:35:59.652 | SUCCESS  | SQL.mainSQL:_update:150 - Update success, name = '中黄' has been changed
+2023-05-24 22:35:59.654 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
+2023-05-24 22:35:59.659 | INFO     | app:api:53 - 收到数据::{'table': 'baseinfo', 'control': 'update', 'data': [{'key': 'name', 'value': "'大黄'", 'condition': "where name='中黄'"}]}
+2023-05-24 22:35:59.659 | INFO     | SQL.mainSQL:update:203 - SQL Statement:: UPDATE baseinfo SET  = 0 WHERE 
+2023-05-24 22:35:59.660 | SUCCESS  | SQL.mainSQL:_update:150 - Update success, name = '大黄' has been changed
+2023-05-24 22:35:59.662 | SUCCESS  | SQL.mainSQL:foo:104 - SQL Operate success
